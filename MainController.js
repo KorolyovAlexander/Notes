@@ -7,14 +7,14 @@ function MainController(){
 
     var _this = this;
 
-    _this.notes = [];
+    this.notes = [];
 
-    _this.add = function(text){
-        _this.notes.push(text);
+    this.add = function(text){
+        _this.notes.unshift(text);
         _this.text = '';
     };
 
-    _this.delete = function(val){
+    this.delete = function(val){
         _this.notes.splice(val,1);
     };
 }

@@ -16,7 +16,7 @@
     <br />
     <br />
     <div ng-repeat="note in vm.notes track by $index">
-        <note value="note" ng-click="vm.delete($index)"></note>
+        <note value="note" delete="vm.delete($index)"></note>
     </div>
 </body>
 </html>

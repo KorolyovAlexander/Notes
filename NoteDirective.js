@@ -6,12 +6,20 @@ app.directive('note', NoteDirective);
 function NoteDirective(){
     return{
         scope:{
-            value: '='
+            value: '=',
+            delete: '&',
+            index: '='
         },
         restrict: 'E',
         templateUrl: 'note-directive.html',
         controller: NoteController,
         bindToController: true,
-        controllerAs: 'nvm'
+        controllerAs: 'vm'
+    };
+}
+
+function NoteController(){
+    this.onClick = function(){
+        this.delete();
     };
 }
